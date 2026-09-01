@@ -1,0 +1,107 @@
+/* ═══════════════════════════════════════════════════════════════
+   index.css — DocuProcess Design System & Utility Styles
+   ═══════════════════════════════════════════════════════════════ */
+
+body {
+  background-color: #f8f9ff;
+  color: #0b1c30;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Material Symbols Outlined font styling */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dropzone background pattern */
+.dropzone-pattern {
+  background-image: repeating-linear-gradient(
+      45deg,
+      #c7c4d8 25%,
+      transparent 25%,
+      transparent 75%,
+      #c7c4d8 75%,
+      #c7c4d8
+    ),
+    repeating-linear-gradient(
+      45deg,
+      #c7c4d8 25%,
+      transparent 25%,
+      transparent 75%,
+      #c7c4d8 75%,
+      #c7c4d8
+    );
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  opacity: 0.1;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7c4d8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #777587;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.animate-pulse-dot {
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+/* Code & JSON Syntax Highlighting */
+.json-key { color: #e06c75; }
+.json-string { color: #98c379; }
+.json-number { color: #d19a66; }
+.json-brace { color: #c678dd; }
+.json-bracket { color: #56b6c2; }
+.json-inner-brace { color: #e5c07b; }
